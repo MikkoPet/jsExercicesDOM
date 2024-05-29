@@ -1,15 +1,16 @@
 function createArticle(post) {
     const article = document.createElement('article');
 
-    const h2 = document.createElement('h2');
-    h2.innerText = post.title;
-    article.append(h2);
-
-    const p = document.createElement('p');
-    p.innerText = post.body;
-    article.append(p);
+    article.append(createElementTextFilled('h2', post.title));
+    article.append(createElementTextFilled('p', post.body));
 
     return article;
+}
+
+function createElementTextFilled (type, content) {
+    const element = document.createElement(type);
+    element.innerText = content;
+    return element;
 }
 
 async function fetchArticles() {
