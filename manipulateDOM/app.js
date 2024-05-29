@@ -1,8 +1,8 @@
 function createArticle(post) {
     const article = document.createElement('article');
     article.innerHTML = `
-        <h2>${post.title}<h2>
-        <p>${post.body}<p>
+        <h2>${post.title}</h2>
+        <p>${post.body}</p>
     `
     return article;
 }
