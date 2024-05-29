@@ -1,9 +1,14 @@
 function createArticle(post) {
     const article = document.createElement('article');
-    article.innerHTML = `
-        <h2>${post.title}</h2>
-        <p>${post.body}</p>
-    `
+
+    const h2 = document.createElement('h2');
+    h2.innerText = post.title;
+    article.append(h2);
+
+    const p = document.createElement('p');
+    p.innerText = post.body;
+    article.append(p);
+
     return article;
 }
 
